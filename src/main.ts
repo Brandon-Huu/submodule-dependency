@@ -6,7 +6,7 @@ import * as dependencies from './dependencies'
 
 async function run(): Promise<void> {
   try {
-    if (github.context.eventName == "pull_request") {
+    if (github.context.eventName == "pull_request" || github.context.eventName == "pull_request_target") {
 
       core.startGroup("Looking for submodule dependencies")
 
